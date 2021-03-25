@@ -30,6 +30,19 @@ function App() {
     setContacts((prevContacts) => [...prevContacts, newContact]);
   };
 
+  const addAppointment = (title, contact, date, time) => {
+    const newAppointment = {
+      title,
+      contact,
+      date,
+      time,
+    };
+    setAppointments((prevAppointments) => [
+      ...prevAppointments,
+      newAppointment,
+    ]);
+  };
+
   return (
     <>
       <nav>
