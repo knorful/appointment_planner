@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 import App from "../App";
 
@@ -17,8 +16,4 @@ describe("<App/> Component", () => {
   it("should have appointments initialized to empty array", () => {
     expect(wrapper.find("appointments")).toEqual(expect.arrayContaining([]));
   });
-
-  //   describe(".addContact", () => {
-  //       it('')
-  //   })
 });
