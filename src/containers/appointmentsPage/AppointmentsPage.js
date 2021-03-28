@@ -21,6 +21,11 @@ export const AppointmentsPage = ({
     /*
     Add contact info and clear data  
     */
+    addAppointment(title, contact, date, time);
+    setTitle("");
+    setDate("");
+    setTime("");
+    setContact("");
   };
 
   return (
@@ -43,7 +48,7 @@ export const AppointmentsPage = ({
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList appointments={appointments} />
+        <TileList contacts={appointments} />
       </section>
     </div>
   );
