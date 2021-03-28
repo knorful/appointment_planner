@@ -9,24 +9,9 @@ export const ContactsPage = ({ contacts, addContact }) => {
   */
   const [name, setName] = useState("");
 
-  // const handleNameChange = (e) => {
-  //   let nameChange = e.target.value;
-  //   setName(nameChange);
-  // };
-
   const [phone, setPhone] = useState("");
 
-  // const handlePhoneChange = (e) => {
-  //   let phoneChange = e.target.value;
-  //   setPhone(phoneChange);
-  // };
-
   const [email, setEmail] = useState("");
-
-  // const handleEmailChange = (e) => {
-  //   let emailChange = e.target.value;
-  //   setEmail(emailChange);
-  // };
 
   const [error, setError] = useState("");
 
