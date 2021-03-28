@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ContactForm } from "../../components/contactForm/ContactForm";
+import { TileList } from "../../components/tileList/TileList";
 
 export const ContactsPage = ({ contacts, addContact }) => {
   /*
@@ -7,24 +9,24 @@ export const ContactsPage = ({ contacts, addContact }) => {
   */
   const [name, setName] = useState("");
 
-  const handleNameChange = (e) => {
-    let nameChange = e.target.value;
-    setName(nameChange);
-  };
+  // const handleNameChange = (e) => {
+  //   let nameChange = e.target.value;
+  //   setName(nameChange);
+  // };
 
   const [phone, setPhone] = useState("");
 
-  const handlePhoneChange = (e) => {
-    let phoneChange = e.target.value;
-    setPhone(phoneChange);
-  };
+  // const handlePhoneChange = (e) => {
+  //   let phoneChange = e.target.value;
+  //   setPhone(phoneChange);
+  // };
 
   const [email, setEmail] = useState("");
 
-  const handleEmailChange = (e) => {
-    let emailChange = e.target.value;
-    setEmail(emailChange);
-  };
+  // const handleEmailChange = (e) => {
+  //   let emailChange = e.target.value;
+  //   setEmail(emailChange);
+  // };
 
   const [error, setError] = useState("");
 
@@ -58,41 +60,20 @@ export const ContactsPage = ({ contacts, addContact }) => {
       <section>
         <h2>Add Contact</h2>
         {error ? <span>{error}</span> : null}
-        <form onSubmit={handleSubmit}>
-          <input
-            onChange={handleNameChange}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter Name"
-            value={name}
-          />
-          <br></br>
-          <input
-            onChange={handleEmailChange}
-            value={email}
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter Email"
-          />
-          <br></br>
-          <input
-            onChange={handlePhoneChange}
-            value={phone}
-            type="number"
-            id="phone"
-            name="phone"
-            placeholder="Enter Phone"
-          />
-          <br></br>
-          <button id="submit-form">Add Contact</button>
-        </form>
+        <ContactForm
+          name={name}
+          setName={setName}
+          phone={phone}
+          setPhone={setPhone}
+          email={email}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}
+        />
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
-        <h3>{name}</h3>
+        <TileList contacts={contacts} />
       </section>
     </div>
   );
