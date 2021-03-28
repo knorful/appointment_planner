@@ -1,9 +1,5 @@
 import React from "react";
 
-export const Tile = () => {
-  return (
-    <div className="tile-container">
-      
-    </div>
-  );
+export const Tile = ({ contact }) => {
+  return <div className="tile-container"></div>;
 };
